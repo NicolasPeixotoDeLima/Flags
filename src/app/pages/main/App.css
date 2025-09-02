@@ -29,13 +29,13 @@
 
 .content {
   position: relative;
-  left: 50%;
-  transform: translate(-50%, -20%);
+  top: -70px; /* sobe a div sobre a imagem */
+  z-index: 20; /* garante que fique acima da imagem */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  background-color: rgba(28, 29, 31, 255);
-  z-index: 20; /* garante que fique acima da imagem */
-  width: 90%;
+  background-color: rgba(28, 29, 31, 1);
+  width: 91%;
+  margin: 0 auto;
 }
 
 .header {
@@ -80,7 +80,6 @@
   border-radius: 10px;
   color: #94979b;
   background-color: rgba(28, 29, 31, 255);
-  border-color: #eee;
   margin-top: 10px;
 }
 
@@ -100,6 +99,9 @@
   position: relative;
   bottom: 130px;
   margin-left: 20%;
+  max-height: 800px;
+  overflow: auto;
+  scrollbar-width: none;
 }
 
 table {
@@ -107,12 +109,13 @@ table {
   border-spacing: 100px 0; /* 16px nas laterais, 0px vertical */
 }
 
-thead tr {
-  border-bottom: 2px solid #ccc;
-}
-
 td {
   padding-top: 40px;
   padding-left: 12px;
   padding-right: 12px;
+}
+
+.regionSelec.active {
+  background-color: #53565c;
+  color: white;
 }
